@@ -1,23 +1,28 @@
-import React, { PropsWithChildren, useCallback, useState } from "react";
+import React, {
+  PropsWithChildren,
+  useCallback,
+  useState,
+  ReactElement,
+} from "react";
 
 type TreeDataType<DATA_TYPE> = {
   data?: DATA_TYPE;
   children?: TreeDataType<DATA_TYPE>[];
 };
 
-type NodeProps<DATA_TYPE> = PropsWithChildren<{
-  data: DATA_TYPE;
-  depth: number;
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-  onToggle: () => void;
-  setOpen: (isOpen: boolean) => void;
-}>;
-
 type Props<DATA_TYPE> = {
   data?: TreeDataType<DATA_TYPE>;
-  node: React.FC<NodeProps<DATA_TYPE>>;
+  node: (
+    props: PropsWithChildren<{
+      data: DATA_TYPE;
+      depth: number;
+      isOpen: boolean;
+      onOpen: () => void;
+      onClose: () => void;
+      onToggle: () => void;
+      setOpen: (isOpen: boolean) => void;
+    }>
+  ) => ReactElement;
   depth?: number;
 };
 
