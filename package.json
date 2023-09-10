@@ -2,8 +2,9 @@
   "name": "react-headless-tree",
   "version": "1.0.0",
   "description": "A react library for generating headless tree",
-  "main": "HeadlessTreeGenerator.tsx",
+  "main": "src/index.tsx",
   "scripts": {
+    "build": "tsc src/index.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +18,17 @@
     "generator"
   ],
   "author": "_fringecore",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/fringecore/react-headless-tree/issues"
   },
   "homepage": "https://github.com/fringecore/react-headless-tree#readme",
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }
