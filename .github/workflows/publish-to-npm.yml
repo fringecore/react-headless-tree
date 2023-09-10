@@ -27,12 +27,13 @@ jobs:
         id: detect-new-version
       
       - name: Publish to NPM
-        # if: steps.detect-new-version.outputs.tag != ''
+        if: steps.detect-new-version.outputs.tag != ''
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo ${{ needs.check-if-new-version.outputs.tag }}
+          echo "Publishing to NPM..."
           sudo npm install -g pnpm
 
           pnpm install
+          pnpm run build
           pnpm publish --access public --no-git-checks
