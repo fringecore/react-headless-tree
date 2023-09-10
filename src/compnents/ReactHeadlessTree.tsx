@@ -57,8 +57,13 @@ export default function HeadlessTree<DATA>({
           onClose={onClose}
           onToggle={onToggle}
         >
-          {(data?.children ?? []).map((child) => (
-            <HeadlessTree depth={depth + 1} node={Node} data={child} />
+          {(data?.children ?? []).map((child, index) => (
+            <HeadlessTree
+              key={index}
+              depth={depth + 1}
+              node={Node}
+              data={child}
+            />
           ))}
         </Node>
       )}
