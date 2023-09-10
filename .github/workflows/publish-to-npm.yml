@@ -23,7 +23,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
           echo ${{ needs.check-if-new-version.outputs.tag }}
-          npm ci
-          npm publish
+          npm install -g pnpm
+
+          pnpm install
+          pnpm publish --publish-branch production --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
