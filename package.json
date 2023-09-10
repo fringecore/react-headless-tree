@@ -1,6 +1,6 @@
 {
   "name": "react-headless-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react library for generating headless tree",
   "main": "HeadlessTreeGenerator.tsx",
   "scripts": {
