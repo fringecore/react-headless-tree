@@ -2,10 +2,9 @@
   "name": "react-headless-tree",
   "version": "1.0.0",
   "description": "A react library for generating headless tree",
-  "main": "src/index.tsx",
+  "main": "index.ts",
   "scripts": {
-    "build": "tsc src/index.tsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
