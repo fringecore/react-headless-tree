@@ -29,4 +29,4 @@ jobs:
           sudo npm install -g pnpm
 
           pnpm install
-          pnpm publish --publish-branch production --access public
+          pnpm publish --access public
