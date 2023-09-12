@@ -6,12 +6,12 @@ settings:
 
 dependencies:
   react:
-    specifier: ^16.8.0
+    specifier: '>=16.8.0'
     version: 16.14.0
 
 devDependencies:
   '@types/react':
-    specifier: ^16.8.0
+    specifier: '>=16.8.0'
     version: 16.14.46
   typescript:
     specifier: ^5.0.2
