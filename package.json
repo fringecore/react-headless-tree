@@ -1,6 +1,6 @@
 {
   "name": "react-headless-tree",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A react library for generating headless tree",
   "main": "dist/index.js",
   "type": "module",
@@ -28,7 +28,7 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@types/react": "=>18.0.25",
+    "@types/react": ">=18.0.25",
     "typescript": "^5.0.2"
   }
 }
