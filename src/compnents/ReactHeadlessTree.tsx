@@ -12,6 +12,7 @@ type TreeDataType<DATA_TYPE> = {
 
 type Props<DATA_TYPE> = {
   data?: TreeDataType<DATA_TYPE>;
+  openTree?: boolean;
   node: (
     props: PropsWithChildren<{
       data: DATA_TYPE;
@@ -29,9 +30,10 @@ type Props<DATA_TYPE> = {
 export default function HeadlessTree<DATA>({
   data,
   node: Node,
+  openTree = false,
   depth = 0,
 }: Props<DATA>) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(openTree);
 
   const onOpen = useCallback(() => {
     setIsOpen(true);
@@ -63,6 +65,7 @@ export default function HeadlessTree<DATA>({
               depth={depth + 1}
               node={Node}
               data={child}
+              openTree={openTree}
             />
           ))}
         </Node>
